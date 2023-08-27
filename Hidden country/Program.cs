@@ -17,7 +17,9 @@ namespace HiddenCountry
         }
         static void MakeTitleCage(string title, params string[] lines)
         {
-
+            // settle the punctation lenght
+            double len = lines.Length;
+            int punctationLength = Convert.ToInt32(Math.Log10(len)) + 3;
 
             // find the longest line's length
             int longestLineLenght = 0;
@@ -28,7 +30,11 @@ namespace HiddenCountry
                     longestLineLenght = line.Length;
                 }
             }
-            // check if the title is longer that the longest line with punctations (10. line)
+            // check if the title is longer that the longest line with punctations (example: 10. line)
+            if (title.Length > longestLineLenght + punctationLength)
+            {
+
+            }
         }
     }
 }
