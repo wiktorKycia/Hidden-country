@@ -77,6 +77,7 @@ namespace HiddenCountry
         }
         static int Log10Int(int a)
         {
+            // returns floored int of log10(a)
             return Convert.ToInt32(Math.Floor(Convert.ToDecimal(Math.Log10(Convert.ToDouble(a)))));
         }
     }
