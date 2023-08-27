@@ -7,6 +7,7 @@ namespace HiddenCountry
         static void Main(string[] args)
         {
             PrintColorMessage(ConsoleColor.Magenta, "Witamy w grze Ukryte Państwo!");
+            MakeTitleCage("To jest moja klatka", "Opcje", "nowa gra", "stara gra", "aa", "bb", "cc", "dd", "ee", "ff", "gg");
 
         }
         static void PrintColorMessage(ConsoleColor color, string message)
@@ -40,13 +41,13 @@ namespace HiddenCountry
                 for (int i = 0; i < lines.Length; i++)
                 {
                     // calculate gap for the text line
-                    int gap = title.Length - longestLineLenght - punctationLength;
+                    int gap = title.Length - lines[i].Length - punctationLength;
 
                     // draw a left side of the box
                     Console.Write($"| ");
 
                     // calculate and draw the punctation gap
-                    int punctationGap = punctationLength - 2 - Convert.ToInt32(Math.Log10(Convert.ToDouble(i + 1)));
+                    int punctationGap = punctationLength - 3 - Log10Int(i+1);
                     for (int j = 0; j < punctationGap; j++)
                     {
                         Console.Write(" ");
@@ -73,6 +74,10 @@ namespace HiddenCountry
                 }
                 Console.WriteLine("-+");
             }
+        }
+        static int Log10Int(int a)
+        {
+            return Convert.ToInt32(Math.Floor(Convert.ToDecimal(Math.Log10(Convert.ToDouble(a)))));
         }
     }
 }
