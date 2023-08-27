@@ -33,6 +33,19 @@ namespace HiddenCountry
             // check if the title is longer that the longest line with punctations (example: 10. line)
             if (title.Length > longestLineLenght + punctationLength)
             {
+            
+                // draw the box
+                Console.WriteLine($"+-{title}-+");
+                foreach (string line in lines)
+                {
+                    int gap = title.Length - longestLineLenght - punctationLength;
+                    Console.Write($"| {line}");
+                    for (int i = 0; i < gap; i++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine(" |");
+                }
 
             }
         }
