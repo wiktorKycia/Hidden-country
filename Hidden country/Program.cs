@@ -17,14 +17,16 @@ namespace HiddenCountry
         }
         static void MakeTitleCage(string title, params string[] lines)
         {
+            // find the longest line's length
             int longestLineLenght = 0;
             foreach (string line in lines)
             {
-                if (line.Length > title.Length && line.Length > longestLineLenght)
+                if (line.Length > longestLineLenght)
                 {
                     longestLineLenght = line.Length;
                 }
             }
+
         }
     }
 }
