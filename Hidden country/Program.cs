@@ -36,17 +36,22 @@ namespace HiddenCountry
             
                 // draw the box
                 Console.WriteLine($"+-{title}-+");
-                foreach (string line in lines)
+                for(int i = 0; i < lines.Length; i++)
                 {
                     int gap = title.Length - longestLineLenght - punctationLength;
-                    Console.Write($"| {line}");
-                    for (int i = 0; i < gap; i++)
+                    Console.Write($"| {i+1}. {lines[i]}");
+                    for (int j = 0; j < gap; j++)
                     {
                         Console.Write(" ");
                     }
                     Console.WriteLine(" |");
                 }
-
+                Console.Write("+-");
+                for (int i = 0; i < title.Length; i++)
+                {
+                    Console.Write("-");
+                }
+                Console.WriteLine("-+");
             }
         }
     }
