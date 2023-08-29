@@ -92,7 +92,7 @@ namespace HiddenCountry
                 for (int i = 0; i < lines.Length; i++)
                 {
                     // calculate gap for the text line
-                    int gap = longestLineLenght - lines[i].Length - punctationLength;
+                    int gap = longestLineLenght - lines[i].Length;
 
                     // draw a left side of the box
                     Console.Write($"| ");
