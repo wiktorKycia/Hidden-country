@@ -76,6 +76,8 @@ namespace HiddenCountry
             }
             else // in this case title is not the longest line
             {
+                // draw the beginning of the top line with title
+                Console.Write($"+-{title}");
 
             }
         }
