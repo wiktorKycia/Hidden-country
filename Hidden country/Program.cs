@@ -74,6 +74,10 @@ namespace HiddenCountry
                 }
                 Console.WriteLine("-+");
             }
+            else // in this case title is not the longest line
+            {
+
+            }
         }
         static int Log10Int(int a)
         {
