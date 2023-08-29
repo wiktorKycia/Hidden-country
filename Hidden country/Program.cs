@@ -7,7 +7,7 @@ namespace HiddenCountry
         static void Main(string[] args)
         {
             PrintColorMessage(ConsoleColor.Magenta, "Witamy w grze Ukryte Państwo!");
-            MakeTitleCage("To jest moja klatka", "Opcje", "nowa gra", "stara gra", "aa", "bb", "cc", "dd", "ee", "ff", "gg");
+            MakeTitleCage("To jest moja klatka", "pcje", "njhvra", "stara gra", "aa", "bb", "cc", "dd", "ee", "ff", "gg");
 
         }
         static void PrintColorMessage(ConsoleColor color, string message)
@@ -79,6 +79,13 @@ namespace HiddenCountry
                 // draw the beginning of the top line with title
                 Console.Write($"+-{title}");
 
+                for (int i = 0; i < longestLineLenght + punctationLength - title.Length; i++)
+                {
+                    Console.Write("-");
+                }
+
+                // draw the rest of the line
+                Console.WriteLine("-+");
             }
         }
         static int Log10Int(int a)
