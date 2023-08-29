@@ -116,6 +116,13 @@ namespace HiddenCountry
                     //draw right side of the box
                     Console.WriteLine(" |");
                 }
+                // draw the bottom side of the box
+                Console.Write("+-");
+                for (int i = 0; i < longestLineLenght + punctationLength; i++)
+                {
+                    Console.Write("-");
+                }
+                Console.WriteLine("-+");
             }
         }
         static int Log10Int(int a)
