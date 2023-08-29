@@ -79,6 +79,7 @@ namespace HiddenCountry
                 // draw the beginning of the top line with title
                 Console.Write($"+-{title}");
 
+                // draw the rest of the dashes
                 for (int i = 0; i < longestLineLenght + punctationLength - title.Length; i++)
                 {
                     Console.Write("-");
