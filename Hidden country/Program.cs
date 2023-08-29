@@ -7,7 +7,7 @@ namespace HiddenCountry
         static void Main(string[] args)
         {
             PrintColorMessage(ConsoleColor.Magenta, "Witamy w grze Ukryte Państwo!");
-            MakeTitleCage("To jest moja klatka", "pcje", "njhvra", "stara gra", "aa", "bb", "cc", "dd", "ee", "ff", "gg");
+            MakeTitleCage("To ", "pcje", "njhvra", "stara gra", "aa", "bb", "cc", "dd", "ee", "ff", "gg");
 
         }
         static void PrintColorMessage(ConsoleColor color, string message)
