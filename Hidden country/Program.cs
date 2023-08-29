@@ -87,6 +87,35 @@ namespace HiddenCountry
 
                 // draw the rest of the line
                 Console.WriteLine("-+");
+
+                // draw the inner box
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    // calculate gap for the text line
+                    int gap = longestLineLenght - lines[i].Length - punctationLength;
+
+                    // draw a left side of the box
+                    Console.Write($"| ");
+
+                    // calculate and draw the punctation gap
+                    int punctationGap = punctationLength - 3 - Log10Int(i + 1);
+                    for (int j = 0; j < punctationGap; j++)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    // write the punctation with the text line
+                    Console.Write($"{i + 1}. {lines[i]}");
+
+                    // draw the text gap
+                    for (int j = 0; j < gap; j++)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    //draw right side of the box
+                    Console.WriteLine(" |");
+                }
             }
         }
         static int Log10Int(int a)
